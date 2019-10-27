@@ -1,7 +1,7 @@
 import XCTest
 
-import MyChartsTests
+import MyHomeWorkUIKitTests
 
 var tests = [XCTestCaseEntry]()
-tests += MyChartsTests.allTests()
+tests += MyHomeWorkUIKitTests.allTests()
 XCTMain(tests)

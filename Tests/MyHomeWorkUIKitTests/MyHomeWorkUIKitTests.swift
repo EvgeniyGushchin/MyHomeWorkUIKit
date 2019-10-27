@@ -1,12 +1,12 @@
 import XCTest
-@testable import MyCharts
+@testable import MyHomeWorkUIKit
 
-final class MyChartsTests: XCTestCase {
+final class MyHomeWorkUIKitTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(MyCharts().text, "Hello, World!")
+        XCTAssertEqual(MyHomeWorkUIKit().text, "Hello, World!")
     }
 
     static var allTests = [

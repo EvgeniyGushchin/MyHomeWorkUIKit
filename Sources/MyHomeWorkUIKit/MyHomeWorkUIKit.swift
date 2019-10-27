@@ -1,3 +1,3 @@
-struct MyCharts {
+struct MyHomeWorkUIKit {
     var text = "Hello, World!"
 }
