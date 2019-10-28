@@ -8,20 +8,26 @@
 
 import UIKit
 
-struct Segment {
+public struct Segment {
     let color: UIColor
     let value: CGFloat
     let title: String
+    
+    public init(color: UIColor, value: CGFloat, title: String) {
+        self.color = color
+        self.value = value
+        self.title = title
+    }
 }
 
-class PieChartView: UIView {
+public class PieChartView: UIView {
     
     let kAnimationCompletionBlock = "animationCompletionBlock"
     
-    var animated = true
-    var animationDuration = 2.0
+    public var animated = true
+    public var animationDuration = 2.0
     
-    var segments: [Segment] = [] {
+    public var segments: [Segment] = [] {
         didSet {
             addSegments()
         }
@@ -43,7 +49,7 @@ class PieChartView: UIView {
         setup()
     }
     
-    override func layoutSublayers(of layer: CALayer) {
+    override public func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         layer.sublayers?.forEach {
             $0.frame = layer.bounds
@@ -142,7 +148,7 @@ class PieChartView: UIView {
 extension PieChartView: CAAnimationDelegate {
     
     
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if let completion = anim.value(forKey: kAnimationCompletionBlock) as? ()->() {
             if flag {
                 completion()
